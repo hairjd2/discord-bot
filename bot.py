@@ -47,7 +47,7 @@ def runBot():
         description="Name of player you want to increment the score of"
     )
     async def addone(ctx, name):
-        await ctx.respond(scorekeeper.addone(name))
+        await ctx.respond(scorekeeper.addone(name, scoreboard))
 
 # Add given points to given player name
     @bot.slash_command(name="addpoints", guild_ids=[490682611065421826, 670684341684142111])  # replace with your guild id
@@ -62,7 +62,7 @@ def runBot():
         description="Amount of points to add"
     )
     async def addpoints(ctx, name, points):
-        await ctx.respond(scorekeeper.addpoints(name, points))
+        await ctx.respond(scorekeeper.addpoints(name, points, scoreboard))
 
 # Show full scoreboard
     @bot.slash_command(name="showplayers", guild_ids=[490682611065421826, 670684341684142111])
