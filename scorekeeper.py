@@ -18,7 +18,7 @@ def deleteplayer(name, scoreboard):
 def getscore(name, scoreboard):
     return name + ": " + str(scoreboard[name])
 
-def addOne(name, scoreboard):
+def addone(name, scoreboard):
     scoreboard[name] += 1
     syncfile(scoreboard)
     return "Added point to " + name
