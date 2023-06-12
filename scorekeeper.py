@@ -19,12 +19,14 @@ def getscore(name, scoreboard):
     return name + ": " + str(scoreboard[name])
 
 def addone(name, scoreboard):
-    scoreboard[name] += 1
+    currScore = int(scoreboard[name])
+    scoreboard[name] = currScore + 1
     syncfile(scoreboard)
     return "Added point to " + name
 
 def addpoints(name, points, scoreboard):
-    scoreboard[name] += points
+    currScore = int(scoreboard[name])
+    scoreboard[name] = currScore + points
     syncfile(scoreboard)
     return "Added " + str(points) + " point(s) to " + name
 
